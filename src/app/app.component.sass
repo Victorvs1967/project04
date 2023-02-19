@@ -1,0 +1,173 @@
+.container
+  max-width: 1200px
+  margin: 0 auto
+
+/* header style */
+.header
+  width: 100%
+  position: fixed
+  padding: 25px 0
+  border-bottom: 1px solid #E5E5E5
+  background-color: white
+  opacity: .9
+  z-index: 100
+
+.header .container
+  display: flex
+  align-items: center
+
+.logo img
+  vertical-align: bottom
+
+.menu
+  margin-left: 244px
+
+.menu ul
+  list-style: none
+  display: flex
+  gap: 115px
+
+.menu a
+  text-decoration: none
+  font-size: 15px
+  color: #030305
+
+.menu a:hover
+  border-bottom: 1px solid #030305
+
+/* main style */
+.main
+  padding: 154px 0 154px 0
+  background-image: url('../assets/img/background.png')
+  background-position: center 50px
+  background-size: cover
+
+.main-info
+  max-width: 855px
+
+.main-title
+  margin-bottom: 40px
+  font-size: 80px
+  font-weight: bold
+  line-height: 88px
+  color: #030305  
+
+.main-text
+  max-width: 502px
+  margin-bottom: 40px
+  font-size: 16px
+  line-height: 21px
+  color: #030305
+
+.main-actions
+  width: 334px
+
+/* car style */
+.car
+  padding-top: 110px
+
+.subtitle
+  margin-bottom: 40px
+  font-size: 60px
+  font-weight: bold
+
+.car-items
+  margin-bottom: 100px
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  text-align: center
+  row-gap: 40px
+
+.car-item
+  max-width: 384px
+  text-align: center
+
+.car-item-image img
+  vertical-align: bottom
+  transition: all .3s
+
+.car-item-image img:hover
+  transform: scale(1.1)
+
+.car-item-title
+  padding: 15px 0 17px
+  font-size: 24px
+  font-weight: bold
+  letter-spacing: 0.02em
+
+.car-item-info
+  margin-bottom: 13px
+  padding: 0 12px
+  display: flex
+  justify-content: space-between
+
+.car-item-feature
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.car-item-text
+  width: 110px
+  font-size: 16px
+  letter-spacing: 0.02em
+  line-height: 130%
+
+.car-item-feature img
+  vertical-align: bottom
+  margin-bottom: 11px
+
+.car-item-actions .button
+  padding: 15px
+
+/* price style */
+.price
+  overflow: hidden
+  & .container
+    padding: 110px 0 121px
+    position: relative
+  & .subtitle
+    margin-bottom: 20px
+  &-text
+    margin-bottom: 60px
+    font-size: 16px
+    color: #5D5D5F
+  &-form
+    max-width: 344px
+    display: flex
+    flex-direction: column
+    gap: 15px
+  &-input
+    padding: 22px 18px
+    background: #FFFFFF
+    border: 1px solid #5D5D5F
+    font-size: 16px
+    color: #000
+    outline: none
+    &.ng-valid.ng-touched
+      border: 1px solid #5D5D5F
+      &::placeholder
+        color: #5D5D5F
+    &.ng-invalid.ng-touched
+      border: 1px solid red
+      &::placeholder
+        color: red
+  &-image
+    position: absolute
+    bottom: 0
+    left: 410px
+
+/* footer style */
+.footer
+  border-top: 1px solid #E5E5E5
+  padding: 25px 0
+
+.footer .container
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.copyright
+  font-size: 15px
+  color: #030305

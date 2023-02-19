@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face
+  font-family: Roboto
+  src: url('assets/fonts/Roboto.ttf')
+
+@font-face
+  font-family: Roboto
+  src: url('assets/fonts/Robotobold.ttf')
+  font-weight: bold
+
+/* common style */
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html,
+body
+  font-family: Roboto, sans-serif
+  scroll-behavior: smooth
+
+.button
+  width: 100%
+  padding: 20px
+  font-size: 16px
+  font-weight: bold
+  letter-spacing: 0.02em
+  color: white
+  text-align: center
+  text-transform: uppercase
+  background: #030305
+  border: none
+  transition: background-color .5s
+
+.button:hover:not(:disabled)
+  cursor: pointer
+  background-color: #575757
+
+.button:disabled
+  cursor: not-allowed
+  color: #aaa
+  background-color: #575757
