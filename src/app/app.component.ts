@@ -32,8 +32,6 @@ export class AppComponent {
 
   @HostListener('document:scroll', ['$event'])
   onScroll() {
-    console.log(this.bgPosition);
-
     this.bgPosition = { backgroundPositionX: -380 + (.3 * window.pageYOffset) + 'px' };
   }
 
