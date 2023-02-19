@@ -23,7 +23,7 @@ export class AppComponent {
   priceForm?: FormGroup;
 
   translate: any;
-  bgPosition: any = { backgroundPositionX: '0px' };
+  bgPosition: any;
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
@@ -32,7 +32,9 @@ export class AppComponent {
 
   @HostListener('document:scroll', ['$event'])
   onScroll() {
-    this.bgPosition = { backgroundPositionX: '0' + (.3 * window.pageYOffset) + 'px' };
+    console.log(this.bgPosition);
+
+    this.bgPosition = { backgroundPositionX: -380 + (.3 * window.pageYOffset) + 'px' };
   }
 
   constructor(private form: FormBuilder) {
