@@ -1,23 +1,4 @@
-<header class="header">
-  <div class="container">
-    <div class="logo">
-      <img src="assets/img/logo.png" alt="logo">
-    </div>
-    <nav class="menu">
-      <ul>
-        <li class="menu-item">
-          <a href="#">Главная</a>
-        </li>
-        <li class="menu-item">
-          <a href="#cars">Автомобили</a>
-        </li>
-        <li class="menu-item">
-          <a href="#price">Бронирование авто</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<app-header></app-header>
 <section class="main" [ngStyle]="bgPosition">
   <div class="container">
     <div class="main-info">
@@ -74,11 +55,4 @@
     <img class="price-image" src="assets/img/rolls.png" alt="rolls" [ngStyle]="translate">
   </div>
 </section>
-<footer class="footer">
-  <div class="container">
-    <div class="logo">
-      <img src="assets/img/logo.png" alt="logo">
-    </div>
-    <div class="copyright">Все права защищены</div>
-  </div>
-</footer>
+<app-footer></app-footer>

@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Car } from './model/car.model';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-
-  carsData = [
+  
+  carsData: Car[] = [
     { image: '1.png', name: 'Lamborghini Huracan Spyder', transmition: 'автомат', engine: '5.2', year: '2019', },
     { image: '2.png', name: 'Chevrolet Corvette', transmition: 'автомат', engine: '6.2', year: '2017', },
     { image: '3.png', name: 'Ferrari California', transmition: 'автомат', engine: '3.9', year: '2010', },

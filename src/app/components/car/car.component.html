@@ -1,0 +1,30 @@
+<section class="car" id="cars" #cars>
+  <div class="container">
+    <h2 class="subtitle">Наш автопарк</h2>
+    <div class="car-items">
+      <div class="car-item" *ngFor="let car of carsData">
+        <div class="car-item-image">
+          <img src="assets/img/{{ car.image }}" alt="car">
+        </div>
+        <h3 class="car-item-title">{{ car.name }}</h3>
+        <div class="car-item-info">
+          <div class="car-item-feature">
+            <img src="assets/img/icons/transmission.png" alt="transmission">
+            <div class="car-item-text"><strong>Коробка</strong><br />{{ car.transmition }}</div>
+          </div>
+          <div class="car-item-feature">
+            <img src="assets/img/icons/engine.svg" alt="engine">
+            <div class="car-item-text"><strong>Двигатель</strong><br />{{ car.engine }} л. с.</div>
+          </div>
+          <div class="car-item-feature">
+            <img src="assets/img/icons/year.png" alt="year">
+            <div class="car-item-text"><strong>Год выпуска</strong><br />{{ car.year }}</div>
+          </div>
+        </div>
+        <div class="car-item-actions">
+          <button class="button" *ngIf="link" (click)="scroll(link, car.name)">ЗАбронировать</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
