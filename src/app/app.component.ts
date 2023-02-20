@@ -27,14 +27,17 @@ export class AppComponent {
   }
 
   constructor(private form: FormBuilder, private carService: CarsService) {
-    this.carService.getData()
-      .subscribe((data: any) => this.carsData = data);
 
     this.priceForm = this.form.group({
       name: [ null, [ Validators.required ] ],
       phone: [ null, [ Validators.required ] ],
       car: [ null, [ Validators.required ] ],
     });
+  }
+
+  ngOnInit() {
+    this.carService.getData()
+      .subscribe((data: any) => this.carsData = data);
   }
 
   
