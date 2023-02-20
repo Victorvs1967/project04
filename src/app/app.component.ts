@@ -65,8 +65,6 @@ export class AppComponent {
         });
 
       this.priceForm.reset();
-    } else {
-      alert('Заполните поля формы');
     }
   }
 }
