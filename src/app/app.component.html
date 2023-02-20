@@ -18,14 +18,11 @@
     <div class="car-items">
       <div class="car-item" *ngFor="let car of carsData">
         <div class="car-item-image">
-          <!-- <img src="assets/img/{{ car.image }}" alt="car"> -->
           <img src="{{ car.image }}" alt="car">
         </div>
         <h3 class="car-item-title">{{ car.name }}</h3>
         <div class="car-item-info">
           <div class="car-item-feature">
-            <!-- <img src="assets/img/icons/transmission.png" alt="transmission">
-            <div class="car-item-text"><strong>Коробка</strong><br />{{ car.transmition }}</div> -->
             <img src="assets/img/icons/gear.svg" alt="gear">
             <div class="car-item-text"><strong>Привод</strong><br />{{ car.gear }}</div>
           </div>
@@ -34,8 +31,6 @@
             <div class="car-item-text"><strong>Двигатель</strong><br />{{ car.engine }}  л. с.</div>
           </div>
           <div class="car-item-feature">
-            <!-- <img src="assets/img/icons/year.png" alt="year">
-            <div class="car-item-text"><strong>Год выпуска</strong><br />{{ car.year }}</div> -->
             <img src="assets/img/icons/places.svg" alt="places">
             <div class="car-item-text"><strong>Кол. мест</strong><br />{{ car.places }}</div>
           </div>

@@ -7,18 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { MainComponent } from './components/main/main.component';
-// import { CarComponent } from './components/car/car.component';
-import { PriceComponent } from './components/price/price.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MainComponent,
-    // CarComponent,
-    PriceComponent
   ],
   imports: [
     BrowserModule,
