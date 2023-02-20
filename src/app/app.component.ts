@@ -13,6 +13,8 @@ export class AppComponent {
   carsData?: Car[];
   priceForm?: FormGroup;
 
+  category: string = 'sport';
+
   translate: any;
   bgPosition: any;
 
@@ -36,10 +38,14 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.carService.getData()
+    this.carService.getData(this.category)
       .subscribe((data: any) => this.carsData = data);
   }
 
+  toggleCategory(category: string) {
+    this.category = category;
+    this.ngOnInit();
+  }
   
   scroll(link: HTMLElement, payload?: string) {
     link.scrollIntoView();

@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
-    "build": "ng build --deploy-url /car-app/ --base-href /car-app/",
+    "build": "ng build --deploy-url '/cars-app/' --base-href '/cars-app/'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
