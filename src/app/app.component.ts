@@ -25,7 +25,7 @@ export class AppComponent {
 
   @HostListener('document:scroll', ['$event'])
   onScroll() {
-    this.bgPosition = { backgroundPositionX: -380 + (.3 * window.pageYOffset) + 'px' };
+    this.bgPosition = { backgroundPositionX: '0' + (.3 * window.scrollY) + 'px' };
   }
 
   constructor(private form: FormBuilder, private carService: CarsService) {
