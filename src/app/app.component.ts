@@ -39,7 +39,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.carService.getData(this.category)
-      .subscribe((data: any) => this.carsData = data[this.category]);
+      .subscribe((data: any) => this.carsData = data);
   }
 
   toggleCategory(category: string) {
