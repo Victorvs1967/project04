@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Car } from './model/car.model';
+import { CarsService } from './services/cars.service';
 
 @Component({
   selector: 'app-root',
@@ -8,20 +9,11 @@ import { Car } from './model/car.model';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  
-  carsData: Car[] = [
-    { image: '1.png', name: 'Lamborghini Huracan Spyder', transmition: 'автомат', engine: '5.2', year: '2019', },
-    { image: '2.png', name: 'Chevrolet Corvette', transmition: 'автомат', engine: '6.2', year: '2017', },
-    { image: '3.png', name: 'Ferrari California', transmition: 'автомат', engine: '3.9', year: '2010', },
-    { image: '4.png', name: 'Lamborghini Urus', transmition: 'автомат', engine: '4.0', year: '2019', },
-    { image: '5.png', name: 'Audi R8', transmition: 'автомат', engine: '5.2', year: '2018', },
-    { image: '6.png', name: 'Chevrolet Camaro', transmition: 'автомат', engine: '2.0', year: '2019', },
-    { image: '7.png', name: 'Maserati Quattroporte', transmition: 'автомат', engine: '4.0', year: '2018', },
-    { image: '8.png', name: 'Dodge Challenger', transmition: 'автомат', engine: '6.4', year: '2019', },
-    { image: '9.png', name: 'Nissan GT-R', transmition: 'автомат', engine: '3.8', year: '2019', },
-  ];
 
+  carsData?: Car[];
   priceForm?: FormGroup;
+
+  category: string = 'sport';
 
   translate: any;
   bgPosition: any;
@@ -33,17 +25,28 @@ export class AppComponent {
 
   @HostListener('document:scroll', ['$event'])
   onScroll() {
-    this.bgPosition = { backgroundPositionX: -380 + (.3 * window.pageYOffset) + 'px' };
+    this.bgPosition = { backgroundPositionX: 50 - (.13 * window.scrollY) + '%' };
   }
 
-  constructor(private form: FormBuilder) {
+  constructor(private form: FormBuilder, private carService: CarsService) {
+
     this.priceForm = this.form.group({
       name: [ null, [ Validators.required ] ],
       phone: [ null, [ Validators.required ] ],
       car: [ null, [ Validators.required ] ],
     });
   }
-  
+
+  ngOnInit() {
+    this.carService.getData(this.category)
+      .subscribe((data: any) => this.carsData = data);
+  }
+
+  toggleCategory(category: string) {
+    this.category = category;
+    this.ngOnInit();
+  }
+
   scroll(link: HTMLElement, payload?: string) {
     link.scrollIntoView();
     if (this.priceForm && payload) this.priceForm.patchValue({ car: payload });
@@ -51,10 +54,13 @@ export class AppComponent {
 
   submit() {
     if (this.priceForm && this.priceForm.valid) {
-      alert('Спасибо ' + this.priceForm.controls['name'].value + ', мы Вам позвоним');
+      this.carService.sendQuery(this.priceForm.value)
+        .subscribe({
+          next: (res: any) => alert(res.message),
+          error: error => alert(error.error.message),
+        });
+
       this.priceForm.reset();
-    } else {
-      alert('Заполните поля формы');
     }
   }
 }

@@ -2,87 +2,92 @@
 .main
   padding: 154px 0 154px 0
   background-image: url('../assets/img/background.png')
-  background-position: -380px 50px
+  background-position: center
   background-size: cover
-
-.main-info
-  max-width: 855px
-
-.main-title
-  margin-bottom: 40px
-  font-size: 80px
-  font-weight: bold
-  line-height: 88px
-  color: #030305  
-
-.main-text
-  max-width: 502px
-  margin-bottom: 40px
-  font-size: 16px
-  line-height: 21px
-  color: #030305
-
-.main-actions
-  width: 334px
+  &-info
+    max-width: 855px
+  &-title
+    margin-bottom: 40px
+    font-size: 80px
+    font-weight: bold
+    line-height: 88px
+    color: #030305  
+  &-text
+    max-width: 502px
+    margin-bottom: 40px
+    font-size: 16px
+    line-height: 21px
+    color: #030305
+  &-actions
+    width: 334px
 
 /* car style */
 .car
   padding-top: 110px
+  &-items
+    margin-bottom: 100px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    text-align: center
+    row-gap: 40px
+  &-item
+    max-width: 384px
+    text-align: center
+    &-image img
+      vertical-align: bottom
+      transition: all .3s
+    &-image img:hover
+      transform: scale(1.1)
+    &-title
+      padding: 15px 0 17px
+      font-size: 24px
+      font-weight: bold
+      letter-spacing: 0.02em
+    &-info
+      margin-bottom: 13px
+      padding: 0 12px
+      display: flex
+      justify-content: space-between
+    &-feature
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &-text
+      width: 110px
+      font-size: 16px
+      letter-spacing: 0.02em
+      line-height: 130%
+    &-feature img
+      vertical-align: bottom
+      margin-bottom: 11px
+    &-actions .button
+      padding: 15px
+  &-toggle
+    width: 196px
+    margin: 20px 0
+    display: flex
+    border: 1px solid gray
+    div
+      padding: 20px
+      background-color: white
+      text-align: center
+      font-size: 16px
+      font-weight: bold
+      letter-spacing: .02em
+      text-transform: uppercase
+      color: black
+      transition: background-color .5s
+      cursor: pointer
+      &.active
+        background-color: #030305
+        color: #ffffff
 
 .subtitle
   margin-bottom: 40px
   font-size: 60px
   font-weight: bold
-
-.car-items
-  margin-bottom: 100px
-  display: flex
-  justify-content: space-between
-  flex-wrap: wrap
-  text-align: center
-  row-gap: 40px
-
-.car-item
-  max-width: 384px
-  text-align: center
-
-.car-item-image img
-  vertical-align: bottom
-  transition: all .3s
-
-.car-item-image img:hover
-  transform: scale(1.1)
-
-.car-item-title
-  padding: 15px 0 17px
-  font-size: 24px
-  font-weight: bold
-  letter-spacing: 0.02em
-
-.car-item-info
-  margin-bottom: 13px
-  padding: 0 12px
-  display: flex
-  justify-content: space-between
-
-.car-item-feature
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-
-.car-item-text
-  width: 110px
-  font-size: 16px
-  letter-spacing: 0.02em
-  line-height: 130%
-
-.car-item-feature img
-  vertical-align: bottom
-  margin-bottom: 11px
-
-.car-item-actions .button
-  padding: 15px
 
 /* price style */
 .price

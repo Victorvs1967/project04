@@ -1,0 +1,90 @@
+{
+  "sport": [
+    {
+      "image": "assets/img/4.png",
+      "name": "Lamborghini Urus",
+      "gear": "full",
+      "engine": 3.2,
+      "places": 3
+    },
+    {
+      "image": "assets/img/3.png",
+      "name": "Ferrari California",
+      "gear": "full",
+      "engine": 2.2,
+      "places": 3
+    },
+    {
+      "image": "assets/img/2.png",
+      "name": "Chevrolet Corvette",
+      "gear": "full",
+      "engine": 3.2,
+      "places": 3
+    },
+    {
+      "image": "assets/img/6.png",
+      "name": "Chevrolet Camaro",
+      "gear": "full",
+      "engine": 3.2,
+      "places": 3
+    },
+    {
+      "image": "assets/img/5.png",
+      "name": "Audi R8",
+      "gear": "full",
+      "engine": 3.2,
+      "places": 3
+    },
+    {
+      "image": "assets/img/1.png",
+      "name": "Lamborghini Huracan Spyder",
+      "gear": "full",
+      "engine": 5.2,
+      "places": 2
+    }
+  ],
+  "luxury": [
+    {
+      "image": "assets/img/7.png",
+      "name": "Rolls-Royce Wraith",
+      "gear": "full",
+      "engine": 6.6,
+      "places": 4
+    },
+    {
+      "image": "assets/img/8.png",
+      "name": "Rolls-Royce Ghost",
+      "gear": "full",
+      "engine": 6.6,
+      "places": 5
+    },
+    {
+      "image": "assets/img/9.png",
+      "name": "Bentley Continental",
+      "gear": "full",
+      "engine": 6,
+      "places": 4
+    },
+    {
+      "image": "assets/img/10.png",
+      "name": "Rolls-Royce Cullinan",
+      "gear": "full",
+      "engine": 6.7,
+      "places": 5
+    },
+    {
+      "image": "assets/img/11.png",
+      "name": "Bentley Bentayga",
+      "gear": "full",
+      "engine": 6,
+      "places": 5
+    },
+    {
+      "image": "assets/img/12.png",
+      "name": "Rolls-Royce Phantom",
+      "gear": "full",
+      "engine": 6.8,
+      "places": 5
+    }
+  ]
+}
