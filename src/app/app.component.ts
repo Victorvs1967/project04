@@ -9,7 +9,7 @@ import { CarsService } from './services/cars.service';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  
+
   carsData?: Car[];
   priceForm?: FormGroup;
 
@@ -39,14 +39,14 @@ export class AppComponent {
 
   ngOnInit() {
     this.carService.getData(this.category)
-      .subscribe((data: any) => this.carsData = data);
+      .subscribe((data: any) => this.carsData = data[this.category]);
   }
 
   toggleCategory(category: string) {
     this.category = category;
     this.ngOnInit();
   }
-  
+
   scroll(link: HTMLElement, payload?: string) {
     link.scrollIntoView();
     if (this.priceForm && payload) this.priceForm.patchValue({ car: payload });

@@ -13,7 +13,8 @@ export class CarsService {
   }
 
   getData(category: any) {
-    return this.http.get('https://testologia.site/intensive-data', { params: { category: category } });
+    return this.http.get('assets/data.json', { params: { category: category } });
+    // return this.http.get('https://testologia.site/intensive-data', { params: { category: category } });
   }
 
 }

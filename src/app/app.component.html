@@ -2,19 +2,19 @@
 <section class="main" [ngStyle]="bgPosition">
   <div class="container">
     <div class="main-info">
-      <h1 class="main-title">Аренда премиальных автомобилей</h1>
-      <div class="main-text">В нашем клубе имеется солидная коллекция спортивных автомобилей — от достаточно
-        распространенных серийных машин до настоящего гоночного эксклюзива. Воспользуйтесь уникальной возможностью
-        побывать за рулем настоящей легенды и узнать, на что она способна за пределами гоночной трассы!</div>
+      <h1 class="main-title">Premium Car Rental</h1>
+      <div class="main-text">Our club has a solid collection of sports cars - from enough
+      common production cars to a real racing exclusive. Take advantage of this unique opportunity
+      Get behind the wheel of a real legend and find out what she can do off the race track!</div>
       <div class="main-actions">
-        <button class="button" id="main-action" (click)="scroll(cars)">Посмотреть автомобили</button>
+        <button class="button" id="main-action" (click)="scroll(cars)">View cars</button>
       </div>
     </div>
   </div>
 </section>
 <section class="car" id="cars" #cars>
   <div class="container">
-    <h2 class="subtitle">Наш автопарк</h2>
+    <h2 class="subtitle">Our Fleet</h2>
     <div class="car-toggle">
       <div [ngClass]="{ active: category === 'sport' }" (click)="toggleCategory('sport')">Sport</div>
       <div [ngClass]="{ active: category === 'luxury' }" (click)="toggleCategory('luxury')">Luxury</div>
@@ -28,19 +28,19 @@
         <div class="car-item-info">
           <div class="car-item-feature">
             <img src="assets/img/icons/gear.svg" alt="gear">
-            <div class="car-item-text"><strong>Привод</strong><br />{{ car.gear }}</div>
+            <div class="car-item-text"><strong>Drive unit</strong><br />{{ car.gear }}</div>
           </div>
           <div class="car-item-feature">
             <img src="assets/img/icons/engine.svg" alt="engine">
-            <div class="car-item-text"><strong>Двигатель</strong><br />{{ car.engine }}  л. с.</div>
+            <div class="car-item-text"><strong>Engine</strong><br />{{ car.engine }}  л. с.</div>
           </div>
           <div class="car-item-feature">
             <img src="assets/img/icons/places.svg" alt="places">
-            <div class="car-item-text"><strong>Кол. мест</strong><br />{{ car.places }}</div>
+            <div class="car-item-text"><strong>Qty. places</strong><br />{{ car.places }}</div>
           </div>
         </div>
         <div class="car-item-actions">
-          <button class="button" (click)="scroll(price, car.name)">ЗАбронировать</button>
+          <button class="button" (click)="scroll(price, car.name)">Book now</button>
         </div>
       </div>
     </div>
@@ -48,13 +48,13 @@
 </section>
 <section class="price" id="price" #price>
   <div class="container">
-    <h2 class="subtitle">Узнать цену и забронировать</h2>
-    <div class="price-text">Заполните данные, и мы перезвоним вам для уточнения всех деталей бронирования</div>
+    <h2 class="subtitle">Check Price and Booking</h2>
+    <div class="price-text">Fill in the data and we will call you back to clarify all the details of the booking</div>
     <form *ngIf="priceForm" [formGroup]="priceForm" class="price-form" (ngSubmit)="submit()">
-      <input type="text" class="price-input" id="name" placeholder="Ваше имя" formControlName="name">
-      <input type="text" class="price-input" id="phone" placeholder="Ваш телефон" formControlName="phone">
-      <input type="text" class="price-input" id="car" placeholder="Автомобиль, который вас интересует" formControlName="car">
-      <button class="button" type="submit" [disabled]="priceForm.invalid">Узнать цену</button>
+      <input type="text" class="price-input" id="name" placeholder="Your name" formControlName="name">
+      <input type="text" class="price-input" id="phone" placeholder="Your phone" formControlName="phone">
+      <input type="text" class="price-input" id="car" placeholder="The vehicle you are interested in" formControlName="car">
+      <button class="button" type="submit" [disabled]="priceForm.invalid">Ask for a price</button>
     </form>
     <img class="price-image" src="assets/img/rolls.png" alt="rolls" [ngStyle]="translate">
   </div>
